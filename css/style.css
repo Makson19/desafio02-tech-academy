@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html, body {
+    font-size: 62.5%; /* = 10px */
+    font-family: "Source Sans Pro", "Times New Roman";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+
+/* ===== HEADER ===== */
+#header {
+    background-color: #0080ed;
+}
+
+#header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 98rem;
+    height: 8rem;
+    margin: auto;
+}
+
+#header .container img {
+    height: 3rem;
+}
+
+#header nav ul{
+    display: flex;
+}
+
+#header nav ul li {
+    list-style: none;
+}
+
+#header nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    padding: 2.4rem;
+    transition: all 250ms linear 0s;
+}
+
+#header nav ul li a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+
+/* ===== HOME ===== */
+#home {
+    margin-bottom: 10rem;
+}
+
+#home .container-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 98rem;
+    margin: 10rem auto 0;
+}
+
+#home .container-main h2 {
+    color: rgb(0,0,0);
+    font-size: 4.5rem;
+    line-height: 5rem;
+    font-weight: bold;
+}
+
+#home .container-main h3 {
+    color: rgb(131,131,131);
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin: 1rem 0;
+}
+
+#home .container-main .form {
+    margin-top: 2rem;
+}
+
+#home .container-main .form input {
+    width: 38rem;
+    padding-left: 1.5rem;
+    font-size: 1.8rem;
+    height: 4.5rem;
+    margin-bottom: 1.3rem;
+    border-radius: 2rem;
+    border: 0.2rem solid #0080ed;
+}
+
+#home .container-main .form [type="submit"] {
+    background-color: #0080ed;
+    color: white;
+}
+
+#home .container-main .form [type="submit"]:hover {
+    cursor: pointer;
+}
+
+#home .container-main img {
+    width: 60rem;
+}
+
+
+/* ===== ARTICLES ===== */
+#articles {
+    width: 90%;
+    max-width: 98rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+}
+
+#articles .card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 0.5rem 0.5rem 1.5rem -0.4rem #000000;
+    transition: all 0.3s ease 0s;
+}
+
+#articles .card:hover {
+    transform: translateY(-0.7rem);
+}
+
+#articles .card .image {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+}
+
+#articles .card .image img {
+    position: absolute;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#articles .card .content {
+    margin: 2rem;
+}
+
+#articles .card .content .text--medium{
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+    color: rgb(187,185,185);
+}
+
+#articles .card .content .title {
+    margin-bottom: 0px;
+}
+
+/* ===== CONTACT ===== */
+#contact {
+    padding: 10rem 0;
+}
+
+#contact .container-contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 98rem;
+    margin: auto;
+}
+
+#contact .container-contact .content {
+    flex: 1;
+    padding-top: 5rem;
+}
+
+#contact .container-contact .content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+#contact .container-contact .content h4 {
+    font-size: 1.6rem;
+}
+
+#contact .container-contact .form {
+    flex: 1;
+    border: 0.1rem solid rgba(0,0,0, 0.2);
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+#contact .container-contact .form {
+    text-align: right;
+}
+
+#contact .container-contact .form .container-name {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+#contact .container-contact .form .container-name div {
+    position: relative;
+    flex: 1;
+}
+
+#contact .container-contact .form .container-name div input {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    border: none;
+    border: 0.2rem solid rgb(150, 150, 150);
+    border-radius: 1rem;
+    outline: none;
+}
+
+#contact .container-contact .form .container-name div label {
+    position: absolute;
+    bottom: 1rem;
+    left: 0.8rem;
+    font-size: 1.6rem;
+    color: rgb(150, 150, 150);
+    background-color: #FFF;
+    transition: all 0.2s ease-in-out;
+    cursor: text;
+}
+
+#contact .container-contact .form .container-name div input:focus, 
+#contact .container-contact .form .container-name div input:valid {
+    border-color: #0080ed;
+}
+
+
+#contact .container-contact .form .container-name div input:focus ~ label,
+#contact .container-contact .form .container-name div input:valid ~ label {
+    transform: translateY(-1.9rem);
+    color: #0080ed;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+}
+
+#contact .container-contact .form .email {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+#contact .container-contact .form .email input {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.4rem;
+    border: 0.2rem solid rgb(150, 150, 150);
+    border-radius: 1rem;
+    padding: 0.8rem;
+    outline: none;
+}
+
+#contact .container-contact .form .email label {
+    position: absolute;
+    bottom: 1rem;
+    left: 0.8rem;
+    font-size: 1.6rem;
+    color: rgb(150, 150, 150);
+    background-color: #FFF;
+    transition: all 0.2s ease-in-out;
+    cursor: text;
+}
+
+#contact .container-contact .form .email input:focus,
+#contact .container-contact .form .email input:valid {
+    border-color: #0080ed;
+}
+
+#contact .container-contact .form .email input:focus ~ label,
+#contact .container-contact .form .email input:valid ~ label {
+    transform: translateY(-1.9rem);
+    color: #0080ed;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+}
+
+#contact .container-contact .form .textarea {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+#contact .container-contact .form .textarea textarea {
+    width: 100%;
+    height: 8.5rem;
+    padding: 0.8rem;
+    resize: none;
+    border-radius: 1rem;
+    border: 0.2rem solid rgb(150, 150, 150);
+}
+
+#contact .container-contact .form .search {
+    margin-bottom: 2rem;
+}
+
+#contact .container-contact .form .search p {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#contact .container-contact .form .search div {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#contact .container-contact .form .search div #option {
+    width: 100%;
+    height: 4rem;
+    border: 0.2rem solid rgb(150, 150, 150);
+    border-radius: 1rem;
+    outline: none;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    display: none;
+}
+
+#contact .container-contact .form .search div #outros:checked ~ div #option {
+    display: initial;
+}
+
+#contact .container-contact .form .container-not {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#contact .container-contact .form [type="submit"] {
+    display: inline-block;
+    padding: 1.5rem 5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    background-color: #0080ed;
+    color: #FFF;
+}

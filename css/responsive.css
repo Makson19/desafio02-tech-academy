@@ -1,0 +1,126 @@
+@import url("./style.css");
+
+@media (max-width: 1000px) {
+    #header .container {
+        padding: 0 2rem;
+    }
+
+    #home .container-main div {
+        margin: auto;
+    }
+
+    #home .container-main div h2 {
+        margin-left: 5rem;
+    }
+
+    #home .container-main div h3 {
+        margin-left: 5rem;
+    }
+
+    #home .container-main div .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 3rem;
+        text-align: center;
+    }
+
+    #home .container-main div .form input {
+        margin: 1.2rem;
+    }
+
+    #home .container-main img {
+        display: none;
+    }
+
+    #contact .container-contact {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #contact .container-contact {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #contact .container-contact .form {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (min-height: 631px) {
+    #header .container-menu{
+        display: none;
+    }
+}
+
+@media (max-width: 630px) {
+    #header nav {
+        display: none;
+    }
+
+    #header .container-menu{
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #header .container-menu #checkbox-menu {
+        position: absolute;
+        opacity: 0;
+    }
+
+    #header .container-menu label{
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 2.2rem;
+        width: 3rem;
+    }
+
+    #header .container-menu label span{
+        position: absolute;
+        display: block;
+        height: 0.5rem;
+        width: 100%;
+        background: white;
+        border-radius: 3rem;
+        transition: 0.25s ease-in-out;
+    }
+
+    #header .container-menu label span:nth-child(1){
+        top: 0;
+    }
+
+    #header .container-menu label span:nth-child(2){
+        top: 0.8rem;
+    }
+
+    #header .container-menu label span:nth-child(3){
+        top: 1.6rem;
+    }
+
+    #checkbox-menu:checked + label span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 0.8rem;
+    }
+
+    #checkbox-menu:checked + label span:nth-child(2){
+        opacity: 0;
+    }
+
+    #checkbox-menu:checked + label span:nth-child(3){
+        transform: rotate(45deg);
+        top: 0.8rem;
+    }
+}
+
+@media (max-width: 550px) {
+    #contact .container-contact .form .container-name {
+        flex-direction: column;
+    }
+}
