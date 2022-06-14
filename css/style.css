@@ -352,4 +352,9 @@ html, body {
     border-radius: 1rem;
     background-color: #0080ed;
     color: #FFF;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#contact .container-contact .form [type="submit"]:hover {
+    opacity: 0.7;
 }
